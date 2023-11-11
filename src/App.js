@@ -8,10 +8,12 @@ import ProductShow from './Components/Pages/SingleProductPage';
 import CartPage from './Components/Pages/CartPage';
 import CheckoutPage from './Components/Pages/CheckoutPage';
 import OrderSuccess from './Components/Pages/OrderSuccessPage';
+import Header from './Components/Header';
 
 function App() {
   return (
     <Router>
+      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/product/:id" element={<ProductShow />} />

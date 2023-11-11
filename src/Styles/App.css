@@ -1,7 +1,46 @@
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
+  font-family: "Archivo", "Montserrat", "Helvetica", sans-serif;
+  color: #002961;
+  overflow-x: hidden;
 }
+
+/* ---------------------------------------- HEADER ---------------------------------------- */
+.header {
+  height: 4em;
+  background: #fcf5ee;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cart-popup {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Position initiale (cachée) */
+  width: 300px;
+  height: 100vh;
+  background-color: beige;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: right 250ms ease-in-out;
+  z-index: 1000;
+}
+
+.cart-popup.open {
+  right: 0; /* Position finale (visible) */
+}
+
+
+.close-cart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
 
 /* ---------------------------------------- HOMEPAGE ---------------------------------------- */
 .products-grid {
