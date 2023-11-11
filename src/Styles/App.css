@@ -205,7 +205,7 @@ html {
 }
 
 .search-bar:focus {
-  border-color: #007bff; /* Couleur bleue lors de la mise au point */
+  border-color: #007bff;
 }
 
 .products-grid-wrapper {
@@ -229,6 +229,31 @@ html {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.pagination-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  font-size: 16px;
+}
+
+.pagination-btn:hover:not([disabled]) {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.pagination-btn:disabled {
+  background-color: #cccccc;
+  border-color: #cccccc;
+  cursor: not-allowed;
+  color: #666666;
+}
+
 
 
 /* ---------------------------------------- CHECKOUT PAGE ---------------------------------------- */

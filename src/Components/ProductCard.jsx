@@ -22,9 +22,9 @@ const ProductCard = ({ product }) => {
       />
       <Link to={`/product/${product.id}`}>
         <img src={imageUrl} alt="" srcset="" />
-        <h3>{product.name} </h3>
-        <p>Categorie: {product.category.name}</p>
-        <h4>Prix: {product.price}€</h4>
+        <h3>{product?.name}</h3>
+        <p>Categorie: {product?.category?.name}</p>
+        <h4>Prix: {product?.price}€</h4>
       </Link>
     </div>
   );
