@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      target: development  # Changez ceci en 'production' pour le build de production
+    ports:
+      - "3001:3001"  # Port pour le développement, changez en "80:80" pour la production
+    volumes:
+      - .:/app  # Montage du volume pour le développement; à enlever pour la production
+    environment:
+      - NODE_ENV=development  # Changez ceci en 'production' pour le build de production
