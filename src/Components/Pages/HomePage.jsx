@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import ProductsGrid from "../ProductsGrid";
 
 function HomePage() {
   return (
-    <div>Accueil</div>
-  )
+    <>
+      <div>Accueil</div>
+      <ProductsGrid />
+    </>
+  );
 }
 
-export default HomePage
+export default HomePage;
