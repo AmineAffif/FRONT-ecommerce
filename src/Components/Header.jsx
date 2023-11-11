@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon, faCartShopping } from "../icons";
+import { FontAwesomeIcon, faCartShopping, faHouse } from "../icons";
 import CartPopup from "./CartPopup";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -8,7 +9,7 @@ function Header() {
   const toggleCart = () => {
     if (isCartOpen) {
       // Informer CartPopup de commencer l'animation de fermeture
-      document.querySelector('.cart-popup').classList.remove('open');
+      document.querySelector(".cart-popup").classList.remove("open");
       // Attendre la fin de l'animation avant de changer l'état
       setTimeout(() => setIsCartOpen(false), 450);
     } else {
@@ -18,7 +19,17 @@ function Header() {
 
   return (
     <div className="header">
-      <FontAwesomeIcon icon={faCartShopping} className="cart-header-icon" onClick={toggleCart} />
+      <Link to="/">
+        <FontAwesomeIcon
+          icon={faHouse}
+          className="header-icon"
+        />
+      </Link>
+      <FontAwesomeIcon
+        icon={faCartShopping}
+        className="header-icon"
+        onClick={toggleCart}
+      />
       {isCartOpen && <CartPopup closeCart={toggleCart} />}
     </div>
   );

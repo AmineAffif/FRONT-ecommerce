@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from "react";
-import { Link } from 'react-router-dom'; // Assurez-vous d'importer Link
+import { Link } from 'react-router-dom';
 import { CartContext } from "../Context/CartContext";
 import { FontAwesomeIcon, faXmark, faTrashCan } from "../icons";
 
