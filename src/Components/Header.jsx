@@ -10,7 +10,7 @@ function Header() {
       // Informer CartPopup de commencer l'animation de fermeture
       document.querySelector('.cart-popup').classList.remove('open');
       // Attendre la fin de l'animation avant de changer l'état
-      setTimeout(() => setIsCartOpen(false), 250); // 250ms est la durée de l'animation
+      setTimeout(() => setIsCartOpen(false), 450);
     } else {
       setIsCartOpen(true);
     }
@@ -18,7 +18,7 @@ function Header() {
 
   return (
     <div className="header">
-      <FontAwesomeIcon icon={faCartShopping} onClick={toggleCart} />
+      <FontAwesomeIcon icon={faCartShopping} className="cart-header-icon" onClick={toggleCart} />
       {isCartOpen && <CartPopup closeCart={toggleCart} />}
     </div>
   );
