@@ -1,4 +1,5 @@
 import React, { useEffect, useContext } from "react";
+import { Link } from 'react-router-dom'; // Assurez-vous d'importer Link
 import { CartContext } from "../Context/CartContext";
 import { FontAwesomeIcon, faXmark, faTrashCan } from "../icons";
 
@@ -57,6 +58,7 @@ function CartPopup({ closeCart }) {
           </div>
         ))}
       </div>
+      <Link to="/checkout" className="validate-cart-button" onClick={closeCart}>Valider le panier</Link>
     </div>
   );
 }
