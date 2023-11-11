@@ -101,16 +101,46 @@ html {
 
 /* ---------------------------------------- HOMEPAGE ---------------------------------------- */
 .products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  padding: 3rem;
 }
 
 .product-card {
+  flex-basis: calc(33.333% - 20px); /* Pour 3 colonnes, en soustrayant l'espacement */
+  flex-grow: 1;
   position: relative;
   border: 1px solid #ccc;
   padding: 10px;
   text-align: center;
+  border: none;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: inherit; 
+}
+.product-card:hover {
+  box-shadow: 0px 0px 12px -4px rgba(0, 0, 0, 0.115);
+}
+.product-card img {
+  margin-top: 1.33rem;
+}
+.product-card * {
+  text-decoration: none;
+  color: inherit; 
+}
+
+/* Responsive Design : Ajuster pour les écrans plus petits */
+@media (max-width: 768px) {
+  .product-card {
+    flex-basis: calc(20% - 20px); /* Pour 2 colonnes sur les écrans moyens */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    flex-basis: 100%; /* Une colonne pour les petits écrans */
+  }
 }
 
 .add-to-cart-plus-icon {
