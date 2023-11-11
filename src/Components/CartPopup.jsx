@@ -58,7 +58,9 @@ function CartPopup({ closeCart }) {
           </div>
         ))}
       </div>
-      <Link to="/checkout" className="validate-cart-button" onClick={closeCart}>Valider le panier</Link>
+      <Link to="/checkout" className="validate-cart-button" onClick={closeCart}>
+        <span>Valider le panier</span>
+      </Link>
     </div>
   );
 }

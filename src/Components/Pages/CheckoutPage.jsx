@@ -92,16 +92,23 @@ function CheckoutPage() {
         {/* Liste des produits du panier */}
         {cart.map((item) => (
           <div className="cart-item-card" key={item.id}>
-            <FontAwesomeIcon
-              icon={faTrashCan}
-              onClick={() => removeFromCart(item.id)}
-              className="cart-item-trash-icon"
+            <img
+              src={`https://picsum.photos/70/70?random=${item.id}`}
+              alt=""
+              srcset=""
             />
-            <span>{item.name}</span>
-            <span>x {item.quantity}</span>
-            <span id="single-cart-item-price">
-              Prix: {item.price * item.quantity}€
-            </span>
+            <div className="product-info-checkout">
+              <FontAwesomeIcon
+                icon={faTrashCan}
+                onClick={() => removeFromCart(item.id)}
+                className="cart-item-trash-icon"
+              />
+              <span>{item.name}</span>
+              <span>x {item.quantity}</span>
+              <span id="single-cart-item-price">
+                Prix: {item.price * item.quantity}€
+              </span>
+            </div>
           </div>
         ))}
       </div>
@@ -141,7 +148,7 @@ function CheckoutPage() {
           />
           <button onClick={handlePayment}>Payer</button>
         </div>
-          <p id="total-price-checkout">Total: {total}€</p>
+        <p id="total-price-checkout">Total: {total}€</p>
       </div>
     </div>
   );
