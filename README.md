@@ -1,4 +1,12 @@
 # The_braderie - Ecommerce 👜
+## Sommaire
+- React et Ruby on Rails
+- Mon processus de développement
+- Schema de la DB
+- Listing des pages
+- Liste des fonctionnalités
+- Ce que j'aurai fait différemment ou mieux
+- Lancer le projet
 
 # React et Ruby on Rails, mais pourquoi ?!
 
@@ -102,27 +110,22 @@ Ruby on Rails ❤️ un framework web de Ruby, que j'ai découvert lors de ma pr
 -----------------------------------------------------------------------------------
 
 # Lancer le projet 🚀
-#### (facile avec Docker)
+### (facile avec Docker)
+
+### Prérequis
+**Docker et Docker Compose installés sur la machine.**
 
 - Ouvrir un terminal
 - Se placer dans un dossier de votre choix
-- Pull mon code _frontend_
+- Pull mon code _frontend_ et lancer le serveur ⚠️ (il sera sur le port 3001)
   ```bash
   git pull git@github.com:AmineAffif/The_braderie-FRONT-ecommerce.git
+  cd The_braderie-FRONT-ecommerce
+  docker-compose up
   ```
-- Pull mon code _backend_
+- Pull mon code _backend_ et lancer le serveur
   ```bash
   git pull git@github.com:AmineAffif/The_braderie-BACK-ecommerce.git
+  cd The_braderie-BACK-ecommerce
+  docker-compose up
   ```
-- Se placer dans le dossier _frontend_
-- Saisir la commande pour lancer le server React ⚠️ (il sera sur le port 3001)
-```bash
-docker-compose up
-```
-
-Si la db est vide
-- Se placer dans le dossier _backend_
-- Saisir la commande pour lancer le server RubyOnRails ⚠️ (il sera sur le port 3000)
-```bash
-docker-compose up
-```
