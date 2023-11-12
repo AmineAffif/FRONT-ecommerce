@@ -121,6 +121,21 @@ html {
 .validate-cart-button:hover {
   background: #154890;
 }
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+}
+.empty-cart svg {
+  font-size: 5rem;
+  color: #1548901c;
+}
+.empty-cart p {
+  opacity: .2;
+}
 
 /* ---------------------------------------- HOMEPAGE ---------------------------------------- */
 .products-grid-wrapper {

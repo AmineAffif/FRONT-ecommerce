@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from "react";
 import { Link } from 'react-router-dom';
 import { CartContext } from "../Context/CartContext";
-import { FontAwesomeIcon, faXmark, faTrashCan } from "../icons";
+import { FontAwesomeIcon, faXmark, faTrashCan, faBagShopping } from "../icons";
 
 function CartPopup({ closeCart }) {
   const { cart, removeFromCart } = useContext(CartContext);
@@ -42,21 +42,31 @@ function CartPopup({ closeCart }) {
         onClick={closeCart}
         className="close-cart"
       />
+      
       <div className="cart-items-wrapper">
-        {cart.map((item) => (
-          <div className="cart-item-card" key={item.id}>
-            <FontAwesomeIcon
-              icon={faTrashCan}
-              onClick={() => removeFromCart(item.id)}
-              className="cart-item-trash-icon"
-            />
-            <span>{item.name}</span>
-            <span>x {item.quantity}</span>
-            <span id="single-cart-item-price">
-              Prix: {item.price * item.quantity}€
-            </span>
+
+      {cart.length === 0 ? (
+          <div className="empty-cart">
+            <FontAwesomeIcon icon={faBagShopping} />
+            <p>Votre panier est vide</p>
           </div>
-        ))}
+        ) : (
+          cart.map((item) => (
+            <div className="cart-item-card" key={item.id}>
+              <FontAwesomeIcon
+                icon={faTrashCan}
+                onClick={() => removeFromCart(item.id)}
+                className="cart-item-trash-icon"
+              />
+              <span>{item.name}</span>
+              <span>x {item.quantity}</span>
+              <span id="single-cart-item-price">
+                Prix: {item.price * item.quantity}€
+              </span>
+            </div>
+          ))
+        )}
+
       </div>
       <Link to="/checkout" className="validate-cart-button" onClick={closeCart}>
         <span>Valider le panier</span>
