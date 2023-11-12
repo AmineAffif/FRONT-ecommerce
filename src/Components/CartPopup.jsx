@@ -1,10 +1,11 @@
 import React, { useEffect, useContext } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { CartContext } from "../Context/CartContext";
 import { FontAwesomeIcon, faXmark, faTrashCan, faBagShopping } from "../icons";
 
 function CartPopup({ closeCart }) {
   const { cart, removeFromCart } = useContext(CartContext);
+  const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -42,10 +43,11 @@ function CartPopup({ closeCart }) {
         onClick={closeCart}
         className="close-cart"
       />
-      
-      <div className="cart-items-wrapper">
 
-      {cart.length === 0 ? (
+      <p className="cart-popup-total-price">Total: { total }€ </p>
+
+      <div className="cart-items-wrapper">
+        {cart.length === 0 ? (
           <div className="empty-cart">
             <FontAwesomeIcon icon={faBagShopping} />
             <p>Votre panier est vide</p>
@@ -66,7 +68,6 @@ function CartPopup({ closeCart }) {
             </div>
           ))
         )}
-
       </div>
       <Link to="/checkout" className="validate-cart-button" onClick={closeCart}>
         <span>Valider le panier</span>
