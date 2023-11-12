@@ -58,10 +58,10 @@ function CartPopup({ closeCart }) {
                 onClick={() => removeFromCart(item.id)}
                 className="cart-item-trash-icon"
               />
-              <span>{item.name}</span>
+              <strong>{item.name}</strong>
               <span>x {item.quantity}</span>
               <span id="single-cart-item-price">
-                Prix: {item.price * item.quantity}€
+                {item.price * item.quantity}.00€
               </span>
             </div>
           ))

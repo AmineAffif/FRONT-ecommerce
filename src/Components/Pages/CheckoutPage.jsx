@@ -106,7 +106,7 @@ function CheckoutPage() {
               <span>{item.name}</span>
               <span>x {item.quantity}</span>
               <span id="single-cart-item-price">
-                Prix: {item.price * item.quantity}€
+                {item.price * item.quantity}.00€
               </span>
             </div>
           </div>
