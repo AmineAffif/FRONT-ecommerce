@@ -97,7 +97,6 @@ Ruby on Rails ❤️ un framework web de Ruby, que j'ai découvert lors de ma pr
 
 - Prendre mon temps
 - Me decider sur une direction artistique précise au lieu de partir au feeling
-- Écrire des test pour le backend et peut-être aussi frontend
 - Vos retours 🫶
 
 -----------------------------------------------------------------------------------
@@ -120,6 +119,8 @@ Ruby on Rails ❤️ un framework web de Ruby, que j'ai découvert lors de ma pr
 ```bash
 docker-compose up
 ```
+
+Si la db est vide
 - Se placer dans le dossier _backend_
 - Saisir la commande pour lancer le server RubyOnRails ⚠️ (il sera sur le port 3000)
 ```bash
