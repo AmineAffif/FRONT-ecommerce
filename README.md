@@ -72,6 +72,7 @@ Ruby on Rails ❤️ un framework web de Ruby, que j'ai découvert lors de ma pr
 - Bouton supprimer du panier (Supprime tous les items) visible on survol d'un order-item
   <img width="507" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/92fff4b8-b7a0-47e1-9686-eae90b364ad0">
 - Bouton + et - (Supprime/ajoute un item)
+
   <img width="505" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/6a517fb8-0d59-4a3f-b35f-87d02c8500e6">
 
 - Affichage dynamique du total pour un produit dans le panier
