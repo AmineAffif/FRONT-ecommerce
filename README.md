@@ -7,6 +7,7 @@
 - Liste des fonctionnalités
 - Ce que j'aurai fait différemment ou mieux
 - Lancer le projet
+- Lancer les tests unitaires
 
 # React et Ruby on Rails, mais pourquoi ?!
 
@@ -128,4 +129,12 @@ Ruby on Rails ❤️ un framework web de Ruby, que j'ai découvert lors de ma pr
   git pull git@github.com:AmineAffif/The_braderie-BACK-ecommerce.git
   cd The_braderie-BACK-ecommerce
   docker-compose up
+  ```
+
+# Lancer les tests unintaires
+
+- Dans une console, placez-vous dans le dossier _backend_ puis lancer les test
+  ```bash
+  cd The_braderie-BACK-ecommerce
+  docker-compose exec rails bundle exec rspec
   ```
