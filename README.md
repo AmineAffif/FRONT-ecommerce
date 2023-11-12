@@ -54,21 +54,29 @@ Ruby on Rails ❤️ un framework web de Ruby, que j'ai découvert lors de ma pr
   <img width="734" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/d1f191ae-2913-4511-b57e-452448b92ec6">
 
 - Barre de recherche dynamique (actualisation à chaque frappe)
-  <img width="779" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/8127e9bc-c04b-45bb-8f0f-94e9623b009a">
+  <img width="775" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/a6e514e6-b361-4c9e-9a4f-e4b88e56cd12">
 
 - Ajout au panier depuis l'accueil (bouton + apparait au survol d'un produit)
   <img width="671" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/3a635226-2c34-45ca-b910-a14bd6db1817">
+
+- L'ajout au panier est contrôlé par les stock disponible
+  <img width="714" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/e5ca2dd3-d247-44fc-8ff0-45ed789276b5">
+- La verification est également faite en backend lors de la commande
+- Une commande est protégé par une transaction ce qui permet une securité des données 
 
 - Sliding cart : Panier dynamique
   J'ai réccupéré la courbe de vitesse de votre site pour faire slide le panier de droite à gauche
   <img width="941" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/36188b5f-87e1-4af1-a354-497df5e47e2b">
 - Gestion des quantité dans le panier (x1, x5, x16 etc...)
-  <img width="924" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/06b0edf0-f0a7-4936-8a78-60186ab1d258">
-- Bouton supprimer du panier (baisse la quantité) visible on survol d'un order-item
-  <img width="604" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/418cfd7c-de3f-45eb-8752-155246211b7d">
+  <img width="889" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/cffc9a16-46af-4204-a407-6eea58c8b4c8">
+- Bouton supprimer du panier (Supprime tous les items) visible on survol d'un order-item
+  <img width="507" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/92fff4b8-b7a0-47e1-9686-eae90b364ad0">
+- Bouton + et - (Supprime/ajoute un item)
+  <img width="505" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/6a517fb8-0d59-4a3f-b35f-87d02c8500e6">
+
 - Affichage dynamique du total pour un produit dans le panier
 
-<img width="406" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/39ea7449-e869-4ac0-8563-9da1aa78c9a9">
+<img width="400" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/459369e1-674d-4e65-b639-b266cb5a1974">
 
 - Affichage dynamique du total du panier
 
@@ -88,10 +96,9 @@ Ruby on Rails ❤️ un framework web de Ruby, que j'ai découvert lors de ma pr
 - Page de succès de la commande
   <img width="1204" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/b2a4798b-f23b-4bca-ad20-d19543d042c1">
 
-
 - Le panier se ferme si on clic en dehors du panier
 - Le panier ne se ferme pas quand on clic sur le +
-  <img width="1205" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/07cbd7a0-3e6d-401d-8107-31f85422e876">
+  <img width="1085" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/18f467a1-1013-4404-91e4-a2842c060ac2">
 
 - Calcul du total des pages
 - Pagination gérée en _Backend_
