@@ -3,9 +3,11 @@
 # React et Ruby on Rails, mais pourquoi ?!
 
 Je manque de temps ⌛️
+
 Alors je choisi des langages que j'aime, donc avec lesquels j'ai beaucoup pratiqué 🥋
 
 React depuis toujours ❤️ (2019)
+
 Ruby on Rails ❤️ un framework web de Ruby, que j'ai découvert lors de ma premiere alternance il y a 2 ans de cela
 
 
