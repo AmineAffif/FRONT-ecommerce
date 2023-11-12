@@ -1,4 +1,4 @@
-# The_braderie-ecommerce 👜
+# The_braderie - Ecommerce 👜
 
 # React et Ruby on Rails, mais pourquoi ?!
 
@@ -92,6 +92,13 @@ Ruby on Rails ❤️ un framework web de Ruby, que j'ai découvert lors de ma pr
 
 - Génération d'image aléatoire via cette API : 
 ![snap api img](https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/0ec10b07-cffa-4852-b202-4178efb9fe75)
+
+# Ce que j'aurai fait différemment ou mieux ? 🤔
+
+- Prendre mon temps
+- Me decider sur une direction artistique précise au lieu de partir au feeling
+- Écrire des test pour le backend et peut-être aussi frontend
+- Vos retours 🫶
 
 -----------------------------------------------------------------------------------
 
