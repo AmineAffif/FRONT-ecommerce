@@ -19,6 +19,8 @@ React depuis toujours ❤️ (2019)
 
 Ruby on Rails ❤️ un framework web de Ruby, que j'ai découvert lors de ma premiere alternance il y a 2 ans de cela
 
+React + Ruby = RR
+<img width="378" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/2fe1fd39-c161-4014-9f7f-cd47c119a7dc">
 
 # 🗒️ Mon processus de développement
 
