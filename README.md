@@ -1,5 +1,13 @@
 # The_braderie-ecommerce 👜
-<img width="941" alt="image" src="https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/0d83ccbc-292f-456b-8da6-3bb2f8a82ee1">
+
+# React et Ruby on Rails, mais pourquoi ?!
+
+Je manque de temps ⌛️
+Alors je choisi des langages que j'aime, donc avec lesquels j'ai beaucoup pratiqué 🥋
+
+React depuis toujours ❤️ (2019)
+Ruby on Rails ❤️ un framework web de Ruby, que j'ai découvert lors de ma premiere alternance il y a 2 ans de cela
+
 
 # 🗒️ Mon processus de développement
 
@@ -80,5 +88,28 @@
 - Génération d'image aléatoire via cette API : 
 ![snap api img](https://github.com/AmineAffif/The_braderie-FRONT-ecommerce/assets/45182137/0ec10b07-cffa-4852-b202-4178efb9fe75)
 
+-----------------------------------------------------------------------------------
 
-## Screenshots du site 📸
+# Lancer le projet 🚀
+#### (facile avec Docker)
+
+- Ouvrir un terminal
+- Se placer dans un dossier de votre choix
+- Pull mon code _frontend_
+  ```bash
+  git pull git@github.com:AmineAffif/The_braderie-FRONT-ecommerce.git
+  ```
+- Pull mon code _backend_
+  ```bash
+  git pull git@github.com:AmineAffif/The_braderie-BACK-ecommerce.git
+  ```
+- Se placer dans le dossier _frontend_
+- Saisir la commande pour lancer le server React ⚠️ (il sera sur le port 3001)
+```bash
+docker-compose up
+```
+- Se placer dans le dossier _backend_
+- Saisir la commande pour lancer le server RubyOnRails ⚠️ (il sera sur le port 3000)
+```bash
+docker-compose up
+```
