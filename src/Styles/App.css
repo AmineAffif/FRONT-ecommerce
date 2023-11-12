@@ -146,6 +146,28 @@ html {
   z-index: 1;
 }
 
+.quantity-control {
+  margin-top: .8rem;
+}
+.quantity-control button {
+  margin: .3rem;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+  width: 20px;
+  height: 20px;
+}
+.quantity-control button:nth-child(1) {
+  margin-left: 0;
+}
+.quantity-control button:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+
+
 /* ---------------------------------------- HOMEPAGE ---------------------------------------- */
 .products-grid-wrapper {
   display: flex;

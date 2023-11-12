@@ -7,13 +7,31 @@ import { useNavigate } from "react-router-dom"; // Importer useNavigate
 import StepBar from "../StepBar";
 
 function CheckoutPage() {
-  const { cart, removeFromCart } = useContext(CartContext);
+  const { cart, setCart, removeFromCart } = useContext(CartContext);
   const navigate = useNavigate(); // Créer une instance de navigate
 
   // Calculer le total du panier
   const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   const [shippingInfo, setShippingInfo] = useState("");
+
+  // Mise à jour de la quantité d'un produit dans le panier
+  const updateQuantity = (productId, newQuantity) => {
+    const product = cart.find((item) => item.id === productId);
+    if (newQuantity <= product.inventory && newQuantity > 0) {
+      setCart((prev) =>
+        prev.map((item) =>
+          item.id === productId ? { ...item, quantity: newQuantity } : item
+        )
+      );
+    } else if (newQuantity === 0) {
+      removeFromCart(product.id)
+    } else {
+      alert(
+        `Désolé, la quantité maximale disponible ne permet pas d'en avoir plus.`
+      );
+    }
+  };
 
   // États pour les informations de paiement
   const [paymentInfo, setPaymentInfo] = useState({
@@ -100,7 +118,6 @@ function CheckoutPage() {
             <img
               src={`https://picsum.photos/70/70?random=${item.id}`}
               alt=""
-              srcset=""
             />
             <div className="product-info-checkout">
               <FontAwesomeIcon
@@ -109,7 +126,20 @@ function CheckoutPage() {
                 className="cart-item-trash-icon"
               />
               <span>{item.name}</span>
-              <span>x {item.quantity}</span>
+              <div className="quantity-control">
+                <button
+                  onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                >
+                  -
+                </button>
+                <span>{item.quantity}</span>
+                <button
+                  onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                >
+                  +
+                </button>
+              </div>
+
               <span id="single-cart-item-price">
                 {item.price * item.quantity}.00€
               </span>

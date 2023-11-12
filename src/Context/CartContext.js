@@ -9,10 +9,13 @@ export const CartProvider = ({ children }) => {
     setCart(prev => {
       const existingProduct = prev.find(item => item.id === product.id);
       if (existingProduct) {
-        // Augmenter la quantité si le produit existe déjà
-        return prev.map(item => 
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-        );
+        // Ne pas augmenter la quantité si le stock maximum est atteint
+        if (existingProduct.quantity < product.inventory) {
+          return prev.map(item => 
+            item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+          );
+        }
+        return prev;
       } else {
         // Ajouter un nouveau produit
         return [...prev, { ...product, quantity: 1 }];
@@ -21,23 +24,24 @@ export const CartProvider = ({ children }) => {
   };
 
   const removeFromCart = (productId) => {
-    setCart(prev => {
-      const existingProduct = prev.find(item => item.id === productId);
-      if (existingProduct && existingProduct.quantity > 1) {
-        // Diminuer la quantité si plus d'un produit
-        return prev.map(item =>
-          item.id === productId ? { ...item, quantity: item.quantity - 1 } : item
-        );
-      } else {
-        // Supprimer le produit du panier
-        return prev.filter(item => item.id !== productId);
+    setCart(prev => prev.filter(item => item.id !== productId));
+  };
+
+  const decreaseQuantity = (productId) => {
+    setCart(prev => prev.map(item => {
+      if (item.id === productId) {
+        return item.quantity > 1 
+          ? { ...item, quantity: item.quantity - 1 }
+          : null;
       }
-    });
+      return item;
+    }).filter(item => item !== null));
   };
 
 
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, setCart, removeFromCart, decreaseQuantity }}>
       {children}
     </CartContext.Provider>
   );

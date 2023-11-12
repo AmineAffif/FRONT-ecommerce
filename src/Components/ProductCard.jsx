@@ -15,13 +15,15 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className="product-card">
-      <FontAwesomeIcon
-        icon={faPlus}
-        className="add-to-cart-plus-icon"
-        onClick={handleAddToCart}
-      />
+      {product.inventory > 0 && (
+        <FontAwesomeIcon
+          icon={faPlus}
+          className="add-to-cart-plus-icon"
+          onClick={handleAddToCart}
+        />
+      )}
       <Link to={`/product/${product.id}`}>
-        <img src={imageUrl} alt="" srcset="" />
+        <img src={imageUrl} alt="" />
         <h3>{product?.name}</h3>
         <p>Categorie: {product?.category?.name}</p>
         <h4>Prix: {product?.price}€</h4>
