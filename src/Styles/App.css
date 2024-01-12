@@ -645,3 +645,43 @@ html {
     margin-top: 2rem;
   }
 }
+
+
+/* Styles pour le mode sombre */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .header {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark-mode .cart-popup {
+  background-color: #333333;
+  color: #000;
+}
+
+
+.dark-mode .product-card:hover {
+  background-color: #181818;
+}
+.dark-mode .product-card {
+  color: #ffffff;
+}
+
+.dark-mode-icon {
+  color: #ffffff; /* Couleur pour le mode sombre */
+}
+
+/* Lorsque le mode sombre est activé, changez la couleur de l'icône de soleil */
+.dark-mode .header-icon {
+  color: #fff; /* Couleur pour le mode lumineux */
+}
+
+.fa-sun {
+  position: absolute;
+  right: 2rem;
+  top: 1.5rem;
+}
