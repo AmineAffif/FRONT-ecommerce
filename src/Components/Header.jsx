@@ -1,10 +1,14 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon, faCartShopping, faHouse } from "../icons";
+import React, { useState, useEffect } from "react";
+
+import { FontAwesomeIcon, faCartShopping, faHouse, faSun } from "../icons";
 import CartPopup from "./CartPopup";
 import { Link } from "react-router-dom";
 
 function Header() {
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("darkMode") === "true"
+  );
 
   const toggleCart = () => {
     if (isCartOpen) {
@@ -17,13 +21,25 @@ function Header() {
     }
   };
 
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+    localStorage.setItem("darkMode", darkMode);
+  }, [darkMode]);
+
   return (
     <div className="header">
+      <FontAwesomeIcon
+        icon={faSun}
+        className={`header-icon ${darkMode ? 'dark-mode-icon' : ''}`}
+        onClick={() => setDarkMode(!darkMode)}
+      />
+
       <Link to="/">
-        <FontAwesomeIcon
-          icon={faHouse}
-          className="header-icon"
-        />
+        <FontAwesomeIcon icon={faHouse} className="header-icon" />
       </Link>
       <FontAwesomeIcon
         icon={faCartShopping}
