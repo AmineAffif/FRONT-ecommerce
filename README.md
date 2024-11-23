@@ -1,4 +1,5 @@
-# The_braderie - Ecommerce 👜
+# Ecommerce 👜
+
 ## Sommaire
 - React et Ruby on Rails
 - Mon processus de développement
